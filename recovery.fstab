@@ -6,6 +6,7 @@
 /boot			emmc	/dev/block/bootdevice/by-name/boot
 /cache			ext4	/dev/block/bootdevice/by-name/cache
 /data			ext4	/dev/block/bootdevice/by-name/userdata								flags=fileencryption=ice
+/persist		ext4	/dev/block/bootdevice/by-name/persist								flags=display="Persist"
 /misc			emmc	/dev/block/bootdevice/by-name/misc
 /recovery		emmc	/dev/block/bootdevice/by-name/recovery								flags=backup=1
 /system			ext4	/dev/block/bootdevice/by-name/system
