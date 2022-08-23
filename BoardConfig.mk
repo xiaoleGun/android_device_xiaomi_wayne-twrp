@@ -101,6 +101,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # TWRP specific build flags
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_THEME := portrait_hdpi
+TW_DEFAULT_LANGUAGE := zh_CN
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
