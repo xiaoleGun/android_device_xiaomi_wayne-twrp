@@ -14,21 +14,21 @@
 # limitations under the License.
 #
 
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/xiaomi/wayne/device.mk)
+
+# Inherit from common AOSP config
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/twrp/config/common.mk)
+
 # Release name
 PRODUCT_RELEASE_NAME := wayne
 
-$(call inherit-product, build/target/product/embedded.mk)
-
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.usb.controller=a800000.dwc3 \
-    sys.usb.rndis.func.name=rndis_bam \
-    sys.usb.rmnet.func.name=rmnet_bam
-
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_wayne
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := twrp_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
