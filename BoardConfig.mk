@@ -23,6 +23,9 @@
 
 DEVICE_PATH := device/xiaomi/wayne
 
+# Build rules
+ALLOW_MISSING_DEPENDENCIES=true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
