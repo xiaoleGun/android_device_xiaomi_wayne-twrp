@@ -69,6 +69,19 @@ TARGET_PREBUILT_KERNEL := device/xiaomi/wayne/Image.gz-dtb
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
+# Libraries
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.system.suspend@1.0 \
+    libhardware_legacy \
+    libion \
+    libxml2
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.system.suspend@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libhardware_legacy.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+
 # Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
