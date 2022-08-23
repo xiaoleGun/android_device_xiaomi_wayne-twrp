@@ -2,7 +2,7 @@ This repository contains twrp device configuration for Xiaomi MI 6X (wayne)
 
 To build
 
-. build/envsetup.sh && lunch twrp_wayne-eng && mka recoveryimage ALLOW_MISSING_DEPENDENCIES=true
+. build/envsetup.sh && lunch twrp_wayne-eng && mka recoveryimage
 
 Basic   | Spec Sheet
 -------:|:----------
