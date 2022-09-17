@@ -1,8 +1,5 @@
 import /init.recovery.qcom_decrypt.rc
 
-on init
-    setprop prepdecrypt.setpatch true
-
 on boot
     start health-hal-2-1
     setprop sys.usb.config adb

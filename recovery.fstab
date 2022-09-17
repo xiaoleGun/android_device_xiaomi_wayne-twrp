@@ -10,8 +10,8 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 # Non-A/B fstab.qcom variant
-#<src>                                                   <mnt_point>          <type>  <mnt_flags and options>                                                                         <fs_mgr_flags>
-/dev/block/bootdevice/by-name/userdata                   /data                ext4    nosuid,nodev,barrier=1,noauto_da_alloc,discard,noatime,lazytime,errors=panic                    wait,check,fileencryption=ice,quota
-/dev/block/bootdevice/by-name/userdata                   /data                f2fs    nosuid,nodev,noatime,discard,background_gc=off,fsync_mode=nobarrier                             wait,quota,fileencryption=ice
-/dev/block/bootdevice/by-name/cache                      /cache               ext4    nosuid,nodev,barrier=1,noauto_da_alloc,discard,noatime,lazytime                                 wait
-/dev/block/bootdevice/by-name/misc                       /misc                emmc    defaults                                                                                        defaults
+#<src>                                                   <mnt_point>           <type>  <mnt_flags and options>                                                                            <fs_mgr_flags>
+/dev/block/bootdevice/by-name/cache                      /cache                ext4    nosuid,nodev,noatime,barrier=1                                                                     defaults
+/dev/block/bootdevice/by-name/cache                      /cache                f2fs    nosuid,nodev,noatime,background_gc=on,noatime                                                      defaults
+/dev/block/bootdevice/by-name/userdata                   /data                 ext4    nosuid,nodev,noatime,barrier=1,noauto_da_alloc,errors=panic                                        wait,latemount,check,fileencryption=ice
+/dev/block/bootdevice/by-name/userdata                   /data                 f2fs    nosuid,nodev,noatime,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier                   wait,latemount,check,formattable,fileencryption=ice

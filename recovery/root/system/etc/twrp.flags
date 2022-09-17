@@ -8,7 +8,7 @@
 /recovery       emmc    /dev/block/bootdevice/by-name/recovery                                                      flags=display="Recovery";backup=1;flashimg=1
 /system_root    ext4    /dev/block/bootdevice/by-name/system
 /vendor         ext4    /dev/block/bootdevice/by-name/vendor                                                        flags=display="Vendor";backup=1;wipeingui
-/data			ext4	/dev/block/bootdevice/by-name/userdata							                            flags=display="Data";fileencryption=ice;length=-16384
+/data			ext4	/dev/block/bootdevice/by-name/userdata
 /firmware       vfat    /dev/block/bootdevice/by-name/modem
 /misc           emmc    /dev/block/bootdevice/by-name/misc
 /cust			ext4	/dev/block/bootdevice/by-name/cust
