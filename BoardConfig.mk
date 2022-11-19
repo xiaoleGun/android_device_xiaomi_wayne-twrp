@@ -110,6 +110,7 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # TWRP specific build flags
+TW_DEVICE_VERSION := wayne by xiaoleGun
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_THEME := portrait_hdpi
 TW_DEFAULT_LANGUAGE := zh_CN
