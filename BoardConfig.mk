@@ -126,6 +126,7 @@ TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 TW_USE_TOOLBOX := true
 TW_EXCLUDE_APEX := true
 TW_INCLUDE_RESETPROP := true
+TW_FRAMERATE := 60
 TW_OVERRIDE_SYSTEM_PROPS := \
     "ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
 
