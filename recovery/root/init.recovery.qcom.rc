@@ -5,5 +5,13 @@ on boot
     setprop sys.usb.config adb
 
 on fs
+    start hwservicemanager
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
+service hwservicemanager /system/bin/hwservicemanager
+    user root
+    group root
+    disabled
+    onrestart setprop hwservicemanager.ready false
+    seclabel u:r:recovery:s0
