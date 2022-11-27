@@ -1,5 +1,8 @@
 import /init.recovery.qcom_decrypt.rc
 
+on init
+    exec u:r:recovery:s0 -- /system/bin/resetprop ro.boot.verifiedbootstate orange
+
 on boot
     start health-hal-2-1
     setprop sys.usb.config adb
