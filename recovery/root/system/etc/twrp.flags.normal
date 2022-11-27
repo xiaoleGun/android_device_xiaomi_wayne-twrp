@@ -1,0 +1,3 @@
+/system_root    ext4    /dev/block/bootdevice/by-name/system
+/vendor         ext4    /dev/block/bootdevice/by-name/vendor                                                        flags=display="Vendor";backup=1;wipeingui
+/cust           ext4    /dev/block/bootdevice/by-name/cust

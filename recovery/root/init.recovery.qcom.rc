@@ -1,6 +1,7 @@
 import /init.recovery.qcom_decrypt.rc
 
 on init
+    start detect-dynamic-partitions
     exec u:r:recovery:s0 -- /system/bin/resetprop ro.boot.verifiedbootstate orange
 
 on boot
@@ -17,4 +18,11 @@ service hwservicemanager /system/bin/hwservicemanager
     group root
     disabled
     onrestart setprop hwservicemanager.ready false
+    seclabel u:r:recovery:s0
+
+service detect-dynamic-partitions /system/bin/detect-dynamic-partitions.sh
+    user root
+    group root
+    disabled
+    oneshot
     seclabel u:r:recovery:s0
