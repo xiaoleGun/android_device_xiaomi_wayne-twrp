@@ -1,5 +1,10 @@
+system                                                   /system               erofs   ro                                                                                                 wait,logical
 system                                                   /system               ext4    rw,barrier=1,discard                                                                               wait,logical
+system_ext                                               /system_ext           erofs   ro                                                                                                 wait,logical
 system_ext                                               /system_ext           ext4    rw,barrier=1,discard                                                                               wait,logical
+product                                                  /product              erofs   ro                                                                                                 wait,logical
 product                                                  /product              ext4    rw,barrier=1,discard                                                                               wait,logical
+vendor                                                   /vendor               erofs   ro                                                                                                 wait,logical
 vendor                                                   /vendor               ext4    rw,barrier=1,discard                                                                               wait,logical
+odm                                                      /odm                  erofs   ro                                                                                                 wait,logical
 odm                                                      /odm                  ext4    rw,barrier=1,discard                                                                               wait,logical
