@@ -6,5 +6,3 @@ product                                                  /product              e
 product                                                  /product              ext4    rw,barrier=1,discard                                                                               wait,logical
 vendor                                                   /vendor               erofs   ro                                                                                                 wait,logical
 vendor                                                   /vendor               ext4    rw,barrier=1,discard                                                                               wait,logical
-odm                                                      /odm                  erofs   ro                                                                                                 wait,logical
-odm                                                      /odm                  ext4    rw,barrier=1,discard                                                                               wait,logical
